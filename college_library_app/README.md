@@ -1,17 +1,129 @@
-# college_library_app
+Практична робота №7 — Бібліотека коледжу
 
-A new Flutter project.
+Дисципліна: Програмування для мобільних платформ
+Тема: Routing and Navigation у Flutter
+Варіант: 1 — Бібліотека коледжу
 
-## Getting Started
+Мета роботи
 
-This project is a starting point for a Flutter application.
+Навчитися організовувати навігацію між екранами Flutter-застосунку, налаштовувати маршрути, передавати параметри, реалізовувати захищені сторінки та повертати результати між екранами.
 
-A few resources to get you started if this is your first Flutter project:
+Опис застосунку
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+Застосунок бібліотеки коледжу дає змогу переглядати каталог книг, фільтрувати їх за жанрами, відкривати детальну інформацію та бронювати книги після авторизації.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Реалізовані функції
+
+Каталог із 18 книгами та 8 жанрами.
+
+Фільтрація книг за жанром.
+
+Детальна сторінка книги за параметром маршруту bookId.
+
+Нижня навігація між вкладками «Каталог», «Мої книги» та «Профіль».
+
+Збереження стану вкладок через StatefulShellRoute.indexedStack.
+
+Захист бронювання через перевірку авторизації.
+
+Повернення до сторінки бронювання після входу.
+
+Вибір дати повернення книги та передавання результату між екранами.
+
+Форма профілю з попередженням про незбережені зміни.
+
+Обробка невідомих маршрутів.
+
+Конфігурація deep links зі схемою library://.
+
+Основні маршрути
+
+Маршрут
+
+Призначення
+
+/catalog
+
+Каталог книг
+
+/catalog?genre=Класика
+
+Каталог із фільтром за жанром
+
+/catalog/book/:bookId
+
+Детальна сторінка книги
+
+/catalog/book/:bookId/reserve
+
+Бронювання книги
+
+/login
+
+Вхід у систему
+
+/my-books
+
+Заброньовані книги
+
+/profile
+
+Профіль читача
+
+/choose-date
+
+Вибір дати повернення
+
+Deep links
+
+Приклад посилання на книгу:
+
+library://app/catalog/book/1
+
+Android-конфігурація міститься у android/app/src/main/AndroidManifest.xml, iOS-конфігурація — у ios/Runner/Info.plist.
+
+Команда для перевірки deep link на підключеному Android-пристрої:
+
+adb shell am start -a android.intent.action.VIEW -d "library://app/catalog/book/1"
+
+Використані технології
+
+Flutter
+
+Dart
+
+go_router
+
+Provider
+
+Material Design
+
+Запуск проєкту
+
+У терміналі з кореневої папки проєкту виконайте:
+
+flutter pub get
+flutter run
+
+Перевірка коду
+
+flutter analyze
+flutter test
+
+Структура проєкту
+
+lib/main.dart — точка входу в застосунок.
+
+lib/router.dart — налаштування маршрутів.
+
+lib/models/ — моделі даних.
+
+lib/screens/ — екрани застосунку.
+
+android/ — конфігурація Android.
+
+ios/ — конфігурація iOS.
+
+Висновок
+
+У результаті роботи створено Flutter-застосунок бібліотеки коледжу з каталогом книг, навігацією між вкладками, захищеним бронюванням, вибором дати повернення та налаштуванням deep links.
