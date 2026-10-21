@@ -534,3 +534,26 @@ flutter run
 3. Flutter: Send data to a new screen — https://docs.flutter.dev/cookbook/navigation/passing-data
 4. Flutter: Return data from a screen — https://docs.flutter.dev/cookbook/navigation/returning-data
 5. Flutter: Hot Reload — https://docs.flutter.dev/tools/hot-reload
+Практична робота 6.1 — Базовий State Management у Flutter
+
+Тема: Управління станом у Flutter.
+
+Мета роботи: Навчитися працювати зі станом віджетів, використовувати StatefulWidget, setState() та оновлювати інтерфейс застосунку відповідно до змін даних.
+
+Реалізовано:
+
+Лічильник із поточним значенням.
+
+Збільшення та зменшення значення.
+
+Скидання лічильника.
+
+Історія змін значення.
+
+Оновлення інтерфейсу за допомогою setState().
+
+Технології: Flutter, Dart.
+
+Перевірка: flutter analyze — помилок не виявлено.
+
+Запуск: flutter run -d chrome.
